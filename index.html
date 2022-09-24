@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Draft Banking</title>
+    <link rel="icon" type="image/x-icon" href="./src/assets/logo.png">
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./src/js/app.js"></script>
+    
+</head>
+
+<body class="bg-primary-bgColor">
+    
+    <header class="header w-full fixed z-[9999] duration-200 ease-in-out top-0 left-0">
+        <!-- DESKTOP NAVIGATION -->
+        <!-- <nav class="desktop-nav hidden md:flex max-w-[1440px] mx-auto py-6 px-20 flex-row items-center justify-between gap-4">
+            <div class="image-container max-w-[45px]">
+                <img src="./src/assets/logo.png" alt="" class="w-full">
+            </div>
+            <ul class="flex flex-row gap-20 justify-between items-center">
+                <li class="menu-link text-lg text-white"><a href="">Home</a></li>
+                <li class="menu-link text-lg text-white"><a href="">Features</a></li>
+                <li class="menu-link text-lg text-white"><a href="">Pricing</a></li>
+            </ul>
+            <button class="px-[45px] py-[14px] bg-primary-pink text-lg text-white rounded-3xl cursor-pointer shadow-btnShadow">Sign Up</button>
+        </nav>
+        <div class="hidden md:flex progress-container">
+            <div class="progress-bar" id="indicator"></div>
+        </div> -->
+        
+    <!-- ============================ NAVIGATION ============================ -->
+    <nav class="z-[9999] header fixed mx-auto w-full h-auto px-5 py-4 md:py-6 mobile:px-10 md:px-20 flex flex-row justify-between md:justify-around items-center duration-200"
+        id="mobile-nav">
+        <div class="header-left max-w-[30px] sm:max-w-[45px]">
+            <img src="./src/assets/logo.png" alt="Brand Logo" class="w-full">
+        </div>
+
+        <button id="mobile-menu-btn" class="block md:hidden"><i onclick="Menu(this)"
+                class='bx bx-menu text-white text-[30px] text-left md:hidden md:text-[0px]'></i></button>
+
+        <ul id="navbar-items" class="hidden flex-col items-center justify-center gap-6 md:gap-16 p-4 absolute bg-primary-footer z-[10] left-0 top-[83px] w-full
+                        md:flex md:flex-row md:relative md:top-auto md:left-auto md:bg-transparent md:w-auto shadow-btnShadow md:shadow-none duration-200">
+            <li class="menu-link text-[16px] xl:text-lg text-secondary-dark md:text-white"><a href="#home">Home</a></li>
+            <li class="menu-link text-[16px] xl:text-lg text-secondary-dark md:text-white"><a href="#features">Features</a></li>
+            <li class="menu-link text-[16px] xl:text-lg text-secondary-dark md:text-white"><a href="#pricing">Pricing</a></li>
+            <button class="block md:hidden px-[40px] py-[14px] bg-primary-pink text-lg text-white rounded-3xl cursor-pointer shadow-btnShadow">Sign Up</button>
+        </ul>
+        <button class="hidden md:block text-[16px] xl:text-lg px-[40px] py-[12px] bg-primary-pink text-lg text-white rounded-[20px] cursor-pointer shadow-btnShadow">Sign Up</button>
+    </nav>
+
+    </header>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="section flex flex-col justify-between items-center gap-10 sm:gap-4 sm:flex-row md:pt-[80px] pt-[120px] z-[-1]">
+            <div class="hero-left flex flex-col justify-center items-start gap-6 w-full sm:float-left sm:w-3/6">
+                <h1 class="text-[40px] lg:text-[70px] font-bold text-left text-white">Smart banking for freelancers</h1>
+                <p class="text=[10px] sm:text-[20px] font-normal text-left text-white">Draft is a revolutionary mobile app built to help you manage your business easily and save you money.
+                </p>
+                <button class="primary-button">Register Now <img src="./src/assets/Arrow-Right.png" alt=""></button>
+            </div>
+            <div class="hero-right w-full sm:float-right sm:w-4/6 md:translate-y-[40px]">
+                <img src="./src/assets/hero/hero-image.png" alt="">
+            </div>
+        </section>
+
+        <!-- SECOND SECTION -->
+        <section class="section flex flex-col md:flex-row justify-between items-center md:gap-[100px] gap-[50px] pt-0">
+            <div class="second-left flex flex-col justify-between items-center gap-6 w-full md:w-[50%]">
+                <h1 class="text-[30px] md:text-[45px] md:leading-[55px] lg:text-[65px] lg:leading-[85px] font-bold text-center md:text-left text-primary-blue">One card for all your payments</h1>
+                <p class="text-[16px] lg:text-[20px] font-normal text-center md:text-left text-secondary-light">Get 3% back on everything you buy with the Draft card. Register today and enjoy every aspect of your
+                    business.</p>
+            </div>
+            <div class="second-right w-full mobile:w-[80%] md:w-[50%] flex justify-center drop-shadow-cardShadow">
+                <img src="./src/assets/cards/card-dark.png" alt="" class="">
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section id="features" class="section flex flex-col-reverse md:flex-row justify-between items-center gap-12 lg:gap-[100px]">
+            <div class="stats-left max-w-[500px] max-h-[500px] flex flex-col justify-center items-center gap-[20px] md:gap-[15px] w-full md:w-[50%] mb-24 mobile:mb-0">
+                
+                <div class="top-two flex flex-col mobile:flex-row justify-between gap-[20px] w-full max-w-[500px]">
+                    <div class="flex flex-col gap-2 md:gap-1 items-start justify-center bg-white rounded-[20px] md:rounded-[50px] p-[30px] lg:p-[40px] w-full">
+                        <p class="text-primary-black font-normal text-[16px] md:text-[20px] text-left">Balance</p>
+                        <h2 class="text-primary-blue font-bold text-[30px] md:text-[40px] text-left">$5,600</h2>
+                    </div>
+                    <div class="flex flex-col gap-2 md:gap-1 items-start justify-center bg-white rounded-[20px] md:rounded-[50px] p-[30px] lg:p-[40px] w-full">
+                        <p class="text-primary-black font-normal text-[16px] md:text-[20px] text-left">Last Transaction</p>
+                        <h2 class="text-primary-blue font-bold text-[30px] md:text-[40px] text-left">$230</h2>
+                    </div>
+                </div>
+
+                <div class="bottom bg-white md:rounded-[50px] rounded-[20px] grid grid-cols-4 mobile:grid-cols-7 justify-items-center place-items-end gap-[15px] lg:gap-[25px] p-[30px] md:p-[40px] w-full max-w-[500px]">
+                    <div class="stats-mon flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[130px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[80px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">MON</h3>
+                    </div>
+                    <div class="stats-tue flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[100px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[40px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">tue</h3>
+                    </div>
+                    <div class="stats-wed flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[120px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[75px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">wed</h3>
+                    </div>
+                    <div class="stats-thu flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[100px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[57px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">thu</h3>
+                    </div>
+                    <div class="stats-fri flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[75px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[33px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">fri</h3>
+                    </div>
+                    <div class="stats-sat flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[100px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[52px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">sat</h3>
+                    </div>
+                    <div class="stats-sun flex flex-col justify-center items-end gap-[10px] w-auto">
+                        <div class="stats-level flex flex-row justify-between items-end gap-[5px]">
+                            <div class="stats-blue w-[10px] lg:w-[14px] h-[125px] rounded-full bg-primary-blue"></div>
+                            <div class="stats-red w-[10px] lg:w-[14px] h-[87px] rounded-full bg-primary-pink"></div>
+                        </div>
+                        <h3 class="text-secondary-light text-sm text-center uppercase">sun</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-right mb-24 mobile:mb-0 max-w-[500px] flex flex-col justify-between items-center md:items-start gap-6 w-full md:w-[50%]">
+                <h1 class="text-[30px] md:text-[45px] md:leading-[55px] lg:text-[65px] lg:leading-[85px] font-bold text-center md:text-left text-primary-blue">Manage your finances like a pro in no time </h1>
+                <p class="text-[16px] md:text-[20px] font-normal text-center md:text-left text-secondary-light">With Draft, book keeping, banking, and invoices are all in one place. You will always know where you stand.</p>
+                <button class="primary-button">Learn More <img src="./src/assets/Arrow-Right.png" alt=""></button>
+            </div>
+        </section>
+
+        <!-- CHAT SECTION -->
+        <section class="section flex flex-col md:flex-row justify-between items-center gap-[100px]">
+            <img src="./src/assets/chat-profile/chat-dots-bg.png" alt="" class="hidden absolute translate-x-[-70px] translate-y-[-210px]">
+            <div class="chat-left flex flex-col justify-between items-center md:items-start gap-6 w-full md:w-[35%] max-w-[500px]">
+                <h1 class="text-[30px] md:text-[60px] font-bold text-center md:text-left text-primary-blue">We support you in 5 different languages</h1>
+                <p class="text-[16px] md:text-[20px] font-normal text-center md:text-left text-secondary-light">Our support team is here to help you in 5 languages – English, French, Spanish, Polish, and German.
+                </p>
+                <div class="flex flex-row justify-center items-center gap-2 translate-x-[20px] mobile:translate-x-0">
+                    <div class="pfp-imgs flex flex-row justify-center items-start">
+                        <img src="./src/assets/chat-profile/1.png" alt="" class="w-[35px] mobile:w-[60px]">
+                        <img src="./src/assets/chat-profile/2.png" alt="" class="w-[35px] mobile:w-[60px] translate-x-[-20px]">
+                        <img src="./src/assets/chat-profile/3.png" alt="" class="w-[35px] mobile:w-[60px] translate-x-[-40px]">
+                        <img src="./src/assets/chat-profile/4.png" alt="" class="w-[35px] mobile:w-[60px] translate-x-[-60px]">
+                        <img src="./src/assets/chat-profile/5.png" alt="" class="w-[35px] mobile:w-[60px] translate-x-[-80px]">
+                    </div>
+                    <p class="text-[20px] font-normal text-left text-secondary-light translate-x-[-70px]">+20</p>
+                </div>
+            </div>
+
+            <div class="chat-right flex flex-col justify-center items-center gap-4 md:gap-8 w-full md:w-[50%] md:scale-[1.06]">
+                <div class="chat flex flex-col gap-2 justify-center items-start max-w-[450px] w-full">
+                    <div class="profile flex flex-row justify-center items-end md:gap-4 gap-2 w-max-content">
+                        <img src="./src/assets/chat-profile/claire.png" alt="" class="w-[40px] md:w-[55px]">
+                        <h2 class="text-secondary-light font-normal text-[16px] md:text-[20px] px-[20px] py-[20px] md:px-[40px] md:py-[30px] bg-white rounded-tl-[20px] md:rounded-tl-[30px] rounded-tr-[20px] md:rounded-tr-[30px] rounded-br-[20px] md:rounded-br-[30px] rounded-bl-[0px] w-full">Hi Mike. How can I help you?</h2>
+                    </div>
+                    <p class="time text-secondary-light pl-[72px]">Claire, 12:35</p>
+                </div>
+                <div class="chat flex flex-col gap-2 justify-center items-end max-w-[500px] w-full">
+                    <div class="profile flex flex-row justify-center items-end md:gap-4 gap-2 w-max-content">
+                        <h2 class="text-white font-normal text-[16px] md:text-[20px] px-[20px] py-[20px] md:px-[40px] md:py-[30px] bg-secondary-light rounded-tl-[20px] md:rounded-tl-[30px] rounded-tr-[20px] md:rounded-tr-[30px] rounded-br-20px] md:rounded-br-[0px] rounded-bl-[20px] md:rounded-bl-[30px] w-full">My credit card is stolen ...</h2>
+                        <img src="./src/assets/chat-profile/mike.png" alt="" class="w-[40px] md:w-[55px]">
+                    </div>
+                    <p class="time text-secondary-light pr-[72px]">Mike, 12:36</p>
+                </div>
+                <div class="chat flex flex-col gap-2 justify-center items-start max-w-[500px] w-full">
+                    <div class="profile flex flex-row justify-center items-end md:gap-4 gap-2 w-max-content">
+                        <img src="./src/assets/chat-profile/claire.png" alt="" class="w-[40px] md:w-[55px]">
+                        <h2 class="text-secondary-light font-normal text-[16px] md:text-[20px] px-[20px] py-[20px] md:px-[40px] md:py-[30px] bg-white rounded-tl-[20px] md:rounded-tl-[30px] rounded-tr-[20px] md:rounded-tr-[30px] rounded-br-[20px] md:rounded-br-[30px] rounded-bl-[0px] w-full">Ok. No problem. We will take care of this.</h2>
+                    </div>
+                    <p class="time text-secondary-light pl-[72px]">Claire, 12:37</p>
+                </div>
+            </div>
+            <img src="./src/assets/chat-profile/chat-dots-bg.png" alt="" class="hidden absolute translate-x-[335%] translate-y-[210px] z-[-10]">
+        </section>
+
+        <!-- SUBSCRIPTION CARD SECTION -->
+        <section id="pricing" class="section flex flex-col justify-center items-center gap-[120px]">
+            <div class="headings flex flex-col justify-center items-center gap-4 md:gap-6">
+                <h1 class="text-primary-blue text-[30px] md:text-[45px] md:leading-[55px] font-bold text-center">An exceptional service, <span class="text-primary-pink">at the right price</span></h1>
+                <p class="text-secondary-dark text-[20px] md:text-[24px] font-normal text-center">Start with our free plan and switch to premium as you grow. </p>
+            </div>
+
+            <div class="subscription-card-container flex flex-col md:flex-row justify-between items-start gap-8">
+                
+                <div class="subscription-card bg-white mobile:w-full max-w-full mobile:max-w-[430px] h-full max-h-[1200px] py-[30px] px-[20px] mobile:py-[60px] mobile:px-[45px] rounded-[50px] border-primary-stoke border gap-10 flex flex-col justify-start items-center">
+                    
+                    <div class="card-price flex flex-col gap-[20px] md:gap-[30px] justify-center items-center">
+                        <h2 class="text-primary-black font-normal text-[30px] mobile:text-[40px] text-center mb-2 md:mb-5">Free</h2>
+                        <h1 class="text-primary-black font-normal text-[50px] mobile::text-[60px] text-center">$0<span class="text-primary-black font-normal text-[40px]">/m</span></h1>
+                        <p class="text-secondary-light font-normal text-[16px] mobile:text-[20px] text-center">Manage your business with a simple and efficient account.</p>
+                        <button class="text-secondary-dark text-[18px] mobile:text-[20px] py-[15px] px-[30px] mobile:px-[45px] rounded-[20px] border-secondary-dark border-[2px] hover:bg-secondary-dark hover:text-white duration-150">Get Started</button>
+                    </div>
+                    
+                    <div class="card-image flex flex-col justify-center items-center gap-5">
+                        <img src="./src/assets/cards/card-dark.png" alt="" class="sub-img w-full max-w-[200px] mobile:max-w-[270px]">
+    
+                        <div class="toggle-image flex flex-row justify-center items-center gap-4">
+                            <button onclick="btnSubDark(this)" id="subBtnDark">
+                                <img src="./src/assets/cards/dark-btn.png" alt="" class="sub-img-btn w-[30px] p-[2px]">
+                            </button>
+                            <button onclick="btnSubLight(this)" id="subBtnLight">
+                                <img src="./src/assets/cards/light-btn.png" alt="" class="sub-img-btn w-[30px] p-[2px]">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-checklist">
+                        <ul class="flex flex-col justify-center items-start gap-2">
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">10 free local transfers</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Free ATM withdrawals in Dollar up to $250 per month</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Free payments to other Draft accounts</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Prepaid debit cards</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Virtual cards</p>
+                            </li>
+
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#B7B7B7] text-[35px]'></i> 
+                                <p class="text-[#B7B7B7] font-normal text-[16px]">Priority 24/7 support</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#B7B7B7] text-[35px]'></i> 
+                                <p class="text-[#B7B7B7] font-normal text-[16px]">Exchange 24 currencies</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#B7B7B7] text-[35px]'></i> 
+                                <p class="text-[#B7B7B7] font-normal text-[16px]">Multi-user access</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="subscription-card bg-white w-full max-w-full mobile:max-w-[430px] h-full max-h-[1200px] py-[30px] px-[20px] mobile:py-[60px] mobile:px-[45px] rounded-[50px] border-primary-stoke border gap-10 flex flex-col justify-start items-center">
+                    
+                    <div class="card-price flex flex-col gap-[20px] md:gap-[30px] justify-center items-center">
+                        <h2 class="text-primary-black font-normal text-[30px] mobile:text-[40px] text-center mb-2 md:mb-5">Premium</h2>
+                        <h1 class="text-primary-black font-normal text-[50px] mobile::text-[60px] text-center">$8<span class="text-primary-black font-normal text-[40px]">/m</span></h1>
+                        <p class="text-secondary-light font-normal text-[16px] mobile:text-[20px] text-center">Priority support and multi-user access to maximize your productivity.</p>
+                        <button class="text-secondary-dark text-[18px] mobile:text-[20px] py-[15px] px-[30px] mobile:px-[45px]  rounded-[20px] border-secondary-dark border-[2px] hover:bg-secondary-dark hover:text-white duration-150">Get Started</button>
+                    </div>
+                    
+                    <div class="card-image flex flex-col justify-center items-center gap-5">
+                        <img src="./src/assets/cards/card-dark.png" alt="" class="sub-img-2 w-full max-w-[200px] mobile:max-w-[270px]">
+    
+                        <div class="toggle-image flex flex-row justify-center items-center gap-4">
+                            <button onclick="btnSubDark2(this)" id="subBtnDark2">
+                                <img src="./src/assets/cards/dark-btn.png" alt="" class="sub-img-btn w-[30px] p-[2px]">
+                            </button>
+                            <button onclick="btnSubLight2(this)" id="subBtnLight2">
+                                <img src="./src/assets/cards/light-btn.png" alt="" class="sub-img-btn w-[30px] p-[2px]">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-checklist">
+                        <ul class="flex flex-col justify-center items-start gap-2">
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">10 free local transfers</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Free ATM withdrawals in Dollar up to $250 per month</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Free payments to other Draft accounts</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Prepaid debit cards</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Virtual cards</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Priority 24/7 support</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Exchange 24 currencies</p>
+                            </li>
+                            <li class="flex flex-row gap-[10px] justify-center items-center">
+                                <i class='bx bx-check ml-[2px] text-[#554DDE] text-[35px]'></i> 
+                                <p class="text-secondary-dark font-normal text-[16px]">Multi-user access</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section flex flex-col justify-center items-center gap-[120px]">
+            <div class="headings flex flex-col justify-center items-center gap-4 md:gap-6">
+                <h1 class="text-primary-blue text-[30px] md:text-[45px] md:leading-[55px] font-bold text-center">Frequently <span class="text-primary-pink">asked questions</span></h1>
+                <p class="text-secondary-light text-[16px] md:text-[24px] font-normal text-center max-w-[600px]">If you are not sure whether Draft is suitable for you or not, do not worry. We are here to explain everything you might want to know.</p>
+            </div>
+
+            <div class="faqs flex flex-col justify-center items-center gap-[20px]">
+                
+                <div class="faq-item w-full flex flex-col justify-center items-start p-[30px] border-[0.5px] rounded-[20px] border-primary-stoke bg-white shadow-faqShadow duration-100" id="question1">
+                    
+                    <a href="#faq1" class="faq-link flex flex-row justify-between items-center gap-4 w-full duration-200 ease-in-out" id="faqLink1">
+                        <h2 class="text-secondary-dark text-[20px] md:text-[24px] font-bold">What is the difference between Draft and a traditional bank account?</h2>
+                        <i class='bx bx-plus text-[30px] text-[#6A6D9E] block' id="plus1"></i>
+                    </a>
+                    
+                    <p class="faq-answer text-[20px] text-secondary-light font-normal text-left w-full max-w-[770px] duration-200 ease-in-out" id="faqAnswer1">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+                
+                <div class="faq-item w-full flex flex-col justify-center items-start p-[30px] border-[0.5px] rounded-[20px] border-primary-stoke bg-white shadow-faqShadow duration-100" id="question1">
+                    
+                    <a href="#faq2" class="faq-link flex flex-row justify-between items-center gap-4 w-full duration-200 ease-in-out" id="faqLink2">
+                        <h2 class="text-secondary-dark text-[20px] md:text-[24px] font-bold">Who can open a Draft account?</h2>
+                        <i class='bx bx-plus text-[30px] text-[#6A6D9E] block' id="plus2"></i>
+                    </a>
+                    
+                    <p class="faq-answer text-[20px] text-secondary-light font-normal text-left w-full max-w-[770px] duration-200 ease-in-out" id="faqAnswer2">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+                
+                <div class="faq-item w-full flex flex-col justify-center items-start p-[30px] border-[0.5px] rounded-[20px] border-primary-stoke bg-white shadow-faqShadow duration-100" id="question1">
+                    
+                    <a href="#faq3" class="faq-link flex flex-row justify-between items-center gap-4 w-full duration-200 ease-in-out" id="faqLink3">
+                        <h2 class="text-secondary-dark text-[20px] md:text-[24px] font-bold">What if I withdraw money abroad?</h2>
+                        <i class='bx bx-plus text-[30px] text-[#6A6D9E] block' id="plus3"></i>
+                    </a>
+                    
+                    <p class="faq-answer text-[20px] text-secondary-light font-normal text-left w-full max-w-[770px] duration-200 ease-in-out" id="faqAnswer3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+                
+                <div class="faq-item w-full flex flex-col justify-center items-start p-[30px] border-[0.5px] rounded-[20px] border-primary-stoke bg-white shadow-faqShadow duration-100" id="question1">
+                    
+                    <a href="#faq4" class="faq-link flex flex-row justify-between items-center gap-4 w-full duration-200 ease-in-out" id="faqLink4">
+                        <h2 class="text-secondary-dark text-[20px] md:text-[24px] font-bold">Can I cancel my subscription or switch to another plan anytime?</h2>
+                        <i class='bx bx-plus text-[30px] text-[#6A6D9E] block' id="plus4"></i>
+                    </a>
+                    
+                    <p class="faq-answer text-[20px] text-secondary-light font-normal text-left w-full max-w-[770px] duration-200 ease-in-out" id="faqAnswer4">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+                
+                <div class="faq-item w-full flex flex-col justify-center items-start p-[30px] border-[0.5px] rounded-[20px] border-primary-stoke bg-white shadow-faqShadow duration-100" id="question1">
+                    
+                    <a href="#faq5" class="faq-link flex flex-row justify-between items-center gap-4 w-full duration-200 ease-in-out" id="faqLink5">
+                        <h2 class="text-secondary-dark text-[20px] md:text-[24px] font-bold">What happens if I withdraw more than $250?</h2>
+                        <i class='bx bx-plus text-[30px] text-[#6A6D9E] block' id="plus5"></i>
+                    </a>
+                    
+                    <p class="faq-answer text-[20px] text-secondary-light font-normal text-left w-full max-w-[770px] duration-200 ease-in-out" id="faqAnswer5">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="section max-w-full mx-auto flex flex-col md:flex-row justify-center items-center gap-[5rem] md:gap-[12rem] bg-primary-footer">
+            <div class="footer-left flex flex-col justify-center items-center md:items-start gap-4">
+                <img src="./src/assets/logo.png" alt="" class="max-w-[80px]">
+                <p class="text-secondary-light text-[18px] md:text-[20px] font-normal text-center md:text-left">Copyright © 2020 Draft LLC. <br>All rights reserved.</p>
+            </div>
+
+            <div class="footer-links grid grid-flow-row sm:grid-cols-3 place-content-center place-items-center gap-x-[70px] gap-y-[30px] md:gap-x-[100px] md:gap-y-[44px]">
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Team</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Press</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Fees</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Services</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Projects</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Affiliate</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Terms of use</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Privacy Policy</a>
+                <a href="" class="text-[20px] text-secondary-dark text-center md:text-left">Contact Us</a>
+            </div>
+        </footer>
+</body>
+
+</html>
